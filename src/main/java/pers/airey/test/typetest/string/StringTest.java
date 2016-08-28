@@ -53,7 +53,6 @@ public class StringTest {
        // System.out.println(s1 == s2);//true
         System.out.println("end testToString");
 
-
         //Boolean：(全部缓存)
         //Byte：(全部缓存)
         //Character(<= 127缓存)
