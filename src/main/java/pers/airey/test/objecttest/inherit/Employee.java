@@ -1,12 +1,14 @@
 package pers.airey.test.objecttest.inherit;
 
+import java.util.Comparator;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
 /**
  * Created by Airey on 2016/9/5.
  */
-public class Employee {
+public class Employee implements Comparable<Employee>,//继承Comparable接口才能比较
+                                 Cloneable { // Cloneable 是一个标记tag 没有方法 因为方法在object 中了
     private String name;
     private double salary;
     private Date hireDay;
@@ -55,7 +57,21 @@ public class Employee {
 //        return 0;
 //    }
 
+//    protected void testRewite() {
+//
+//    }
+
     public Employee getBuddy() {
         return this;
+    }
+
+    public int compareTo(Employee o) {
+        return Double.compare(salary, o.salary);
+    }
+
+    public Employee clone() throws CloneNotSupportedException{ //将clone修改为public 并抛出异常, 修改返回类型
+        Employee cloned = (Employee) super.clone(); //object 默认是浅拷贝
+        cloned.hireDay = (Date) hireDay.clone();
+        return  cloned;
     }
 }

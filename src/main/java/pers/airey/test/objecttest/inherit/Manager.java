@@ -41,6 +41,14 @@ public class Manager extends Employee {
         return result;
     }
 
+//    public void testRewite() {  //不行
+//
+//    }
+
+//    private void testRewite() {  //可以 可以扩大 继承当中子类抛出的异常必须是父类抛出的异常的子异常，或者子类抛出的异常要比父类抛出的异常要少。
+//
+//    }
+
     //    public double getTest() { //错误 虽然返回类型不属于签名的一部分，但必须是返回类型派生类
 //        return 0.0;
 //    }

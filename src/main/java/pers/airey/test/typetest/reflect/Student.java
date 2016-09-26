@@ -16,7 +16,7 @@ public class Student extends Human implements ILeanring{
         return id;
     }
 
-    public void learning() {
+     public void learning() {
         System.out.println("start to learning");
     }
 }
